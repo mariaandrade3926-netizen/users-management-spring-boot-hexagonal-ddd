@@ -19,7 +19,7 @@
     <java.version>17</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- Versiones de dependencias no gestionadas por el BOM de Spring Boot -->
-    <lombok.version>1.18.36</lombok.version>
+    <lombok.version>1.18.40</lombok.version>
     <mysql.connector.version>9.3.0</mysql.connector.version>
     <javamail.version>1.6.2</javamail.version>
     <bcrypt.version>0.10.2</bcrypt.version>
@@ -32,7 +32,7 @@
   <dependencies>
 
     <!-- ======================================================== -->
-    <!-- Spring Boot Starters                                       -->
+    <!-- Spring Boot Starters                                     -->
     <!-- ======================================================== -->
 
     <!-- Web: incluye Tomcat embebido, Jackson, HibernateValidator, SLF4J + Logback -->
@@ -60,14 +60,14 @@
     </dependency>
 
     <!-- ======================================================== -->
-    <!-- Dependencias no gestionadas por el BOM de Spring Boot     -->
+    <!-- Dependencias no gestionadas por el BOM de Spring Boot    -->
     <!-- ======================================================== -->
 
     <!-- Lombok: reducción de boilerplate — versión explícita (superior a la del BOM) -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>${lombok.version}</version>
+      <version>1.18.40</version>
       <scope>provided</scope>
     </dependency>
 
@@ -127,7 +127,7 @@
     </dependency>
 
     <!-- ======================================================== -->
-    <!-- Tests                                                      -->
+    <!-- Tests                                                    -->
     <!-- ======================================================== -->
 
     <!-- Starter de test: JUnit 5, Mockito, AssertJ — gestionados por BOM -->
@@ -164,12 +164,14 @@
         </configuration>
       </plugin>
 
-      <!-- Compilador: versión y source/target gestionados por el parent via java.version -->
-      <!-- Se conserva solo la configuración del annotation processor de Lombok           -->
+      <!-- Compilador: versión y source/target configurados explícitamente -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
+          <source>17</source>
+          <target>17</target>
+          <release>17</release>
           <annotationProcessorPaths>
             <path>
               <groupId>org.projectlombok</groupId>
@@ -217,4 +219,3 @@
   </build>
 
 </project>
-
