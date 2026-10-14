@@ -32,7 +32,7 @@
   <dependencies>
 
     <!-- ======================================================== -->
-    <!-- Spring Boot Starters                                       -->
+    <!-- Spring Boot Starters                                     -->
     <!-- ======================================================== -->
 
     <!-- Web: incluye Tomcat embebido, Jackson, HibernateValidator, SLF4J + Logback -->
@@ -60,7 +60,7 @@
     </dependency>
 
     <!-- ======================================================== -->
-    <!-- Dependencias no gestionadas por el BOM de Spring Boot     -->
+    <!-- Dependencias no gestionadas por el BOM de Spring Boot    -->
     <!-- ======================================================== -->
 
     <!-- Lombok: reducción de boilerplate — versión explícita (superior a la del BOM) -->
@@ -127,7 +127,7 @@
     </dependency>
 
     <!-- ======================================================== -->
-    <!-- Tests                                                      -->
+    <!-- Tests                                                    -->
     <!-- ======================================================== -->
 
     <!-- Starter de test: JUnit 5, Mockito, AssertJ — gestionados por BOM -->
@@ -164,12 +164,14 @@
         </configuration>
       </plugin>
 
-      <!-- Compilador: versión y source/target gestionados por el parent via java.version -->
-      <!-- Se conserva solo la configuración del annotation processor de Lombok           -->
+      <!-- Compilador: versión y source/target configurados explícitamente -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
+          <source>17</source>
+          <target>17</target>
+          <release>17</release>
           <annotationProcessorPaths>
             <path>
               <groupId>org.projectlombok</groupId>
@@ -217,4 +219,3 @@
   </build>
 
 </project>
-
