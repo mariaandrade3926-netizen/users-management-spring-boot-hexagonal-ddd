@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gestion de usuarios</string>
+    <string name="login_title">Iniciar sesion</string>
+    <string name="login_help">Emulador: http://10.0.2.2:8080. Telefono: la IP de tu PC. Produccion: la URL https de Render.</string>
+    <string name="base_url">URL del backend</string>
+    <string name="email">Correo</string>
+    <string name="password">Contrasena</string>
+    <string name="login">Entrar</string>
+    <string name="register">Crear cuenta</string>
+    <string name="users_title">Usuarios</string>
+    <string name="logout">Cerrar sesion</string>
+    <string name="empty_users">No hay usuarios para mostrar.</string>
+    <string name="save">Guardar</string>
+    <string name="delete">Eliminar</string>
+    <string name="name">Nombre</string>
+    <string name="role">Rol</string>
+    <string name="status">Estado</string>
+    <string name="password_optional">Contrasena nueva (opcional)</string>
+    <string name="create_user">Nuevo usuario</string>
+    <string name="edit_user">Editar usuario</string>
+    <string name="pending_notice">La cuenta queda en estado PENDING. Un administrador debe activarla antes de que pueda entrar.</string>
+    <string name="admin_hint">Administrador inicial: admin@example.com / Admin1234!</string>
+</resources>

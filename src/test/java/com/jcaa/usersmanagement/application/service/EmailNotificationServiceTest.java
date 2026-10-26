@@ -105,7 +105,7 @@ class EmailNotificationServiceTest {
   void shouldRethrowEmailSenderExceptionOnCreate() {
     // Arrange
     final EmailSenderException cause =
-        EmailSenderException.becauseSmtpFailed(EMAIL, "Connection refused");
+        EmailSenderException.becauseApiFailed(EMAIL, "HTTP 503");
     doThrow(cause).when(emailSenderPort).send(any());
 
     // Act & Assert
@@ -119,7 +119,7 @@ class EmailNotificationServiceTest {
   void shouldRethrowEmailSenderExceptionOnUpdate() {
     // Arrange
     final EmailSenderException cause =
-        EmailSenderException.becauseSmtpFailed(EMAIL, "Connection refused");
+        EmailSenderException.becauseApiFailed(EMAIL, "HTTP 503");
     doThrow(cause).when(emailSenderPort).send(any());
 
     // Act & Assert

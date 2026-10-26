@@ -41,3 +41,14 @@ build/
 *.log
 
 /spec/
+
+# Secretos locales. Nunca deben versionarse.
+/.environments/
+/.env
+
+# Cliente Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/

@@ -116,4 +116,13 @@ class UserPasswordTest {
     assertEquals(a, b);
     assertEquals(a.hashCode(), b.hashCode());
   }
+
+  @Test
+  @DisplayName("el hash sembrado del administrador verifica Admin1234!")
+  void shouldVerifySeedAdministratorPassword() {
+    final UserPassword stored =
+        UserPassword.fromHash("$2b$12$aLYNurc52qhSoAIig4cVzOU1yxpuZTpiu7CrvirzUidlifFkSxu6C");
+
+    assertTrue(stored.verifyPlain("Admin1234!"));
+  }
 }
